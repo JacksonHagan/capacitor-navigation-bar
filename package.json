@@ -2,9 +2,16 @@
   "name": "@jacksonhagan/navigation-bar",
   "version": "4.0.1",
   "description": "Capacitor Plugin for Navigation Bar",
-  "main": "dist/plugin.cjs.js",
+  "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/esm/index.js",
+      "types": "./dist/esm/index.d.ts"
+    }
+  },
   "unpkg": "dist/plugin.js",
   "private": false,
   "files": [
@@ -13,7 +20,7 @@
     "dist/",
     "ios/Plugin/",
     "HugotomaziCapacitorNavigationBar.podspec",
-    "src/"
+    "dist/"
   ],
   "author": "hugotomazi",
   "license": "MIT",
